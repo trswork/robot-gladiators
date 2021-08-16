@@ -10,9 +10,7 @@ var enemyAttack = 12;
 console.log(enemyNames);
 console.log(enemyNames.length);
 for(var i = 0; i < enemyNames.length; i++) {
-  console.log(enemyNames[i]);
-  console.log(i);
-  console.log(enemyName[i] + " is at " + i + " index");
+  fight(enemyNames[i]);
 }
 console.log(enemyNames[0]);
 console.log(enemyNames[3]);
@@ -89,6 +87,11 @@ var fight = function(enemyName) {
   
       // use debugger to pause script from running and check what's going on at that moment in the code
       // debugger;
+      for (var i = 0; i < enemyNames.length; i++) {
+        debugger;
+        // call fight function with enemy-robot
+        fight(enemyNames[i]);
+      }
   
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
